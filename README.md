@@ -1,126 +1,129 @@
-Here's a polished and professional version of the `README.md` file:
+Here’s a polished and professional version of the `README.md` file for your project:
 
 ---
 
 ```markdown
 # Image Encryption System
 
-The **Image Encryption System** provides a simple yet effective way to encrypt and decrypt images using pixel-level manipulation. The system leverages RGB channel swapping for encryption and decryption, ensuring the original image can be restored accurately.
+A secure and efficient image encryption system that manipulates pixel data by swapping RGB channels. This library provides functionality to encrypt and decrypt images, ensuring the integrity and confidentiality of visual data.
 
 ---
 
 ## Features
 
-- **Encryption**: Secures an image by altering its RGB channels.
-- **Decryption**: Restores the original image by reversing the channel manipulation.
-- **Lightweight**: Built using the Pillow library for efficient image processing.
-- **Testable**: Includes comprehensive unit tests with pytest for reliability.
+- **Encryption**: Encrypts an image by swapping its RGB channels.
+- **Decryption**: Restores the original image by reversing the channel swap.
+- **Simple API**: Easy-to-use methods for image encryption and decryption.
+- **Format Support**: Compatible with a variety of image formats using the `Pillow` library.
 
 ---
 
-## Directory Structure
-
-```plaintext
-├── README.md                   # Project overview and usage instructions
-├── requirements.txt            # Project dependencies
-├── src/                        # Source code for encryption and decryption
-│   ├── __init__.py
-│   └── image_crypto.py
-├── tests/                      # Unit tests for the project
-│   ├── __init__.py
-│   └── test_image_crypto.py
-└── examples/                   # Example scripts and assets
-    ├── demo.py                 # Interactive demonstration script
-    └── test_image.png          # Example image for testing
-```
 
 ---
 
-## Installation
+## Setup
 
-To set up the project, clone the repository and install the required dependencies:
+To set up the environment and install the required dependencies, follow these steps:
 
-```bash
-git clone <repository-url>
-cd <repository-name>
-pip install -r requirements.txt
-```
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/your-username/image-encryption-system.git
+   cd image-encryption-system
+   ```
+
+2. Install the dependencies:
+   ```bash
+   pip install -r requirements.txt
+   ```
 
 ---
 
 ## Usage
 
-### Programmatic Use
+The library provides two main functions: `encrypt_image` and `decrypt_image`. Here's how you can use them:
 
-Import the `ImageCrypto` class to integrate encryption and decryption into your own Python scripts:
+### Example Code
 
 ```python
 from src.image_crypto import ImageCrypto
 
+# Initialize the ImageCrypto class
+crypto = ImageCrypto()
+
 # Encrypt an image
-ImageCrypto.encrypt_image("input.png", "encrypted.png")
+crypto.encrypt_image("input.png", "encrypted.png")
+print("Image successfully encrypted!")
 
-# Decrypt an image
-ImageCrypto.decrypt_image("encrypted.png", "decrypted.png")
-```
-
-### Demo Script
-
-Run the interactive demo script to see the encryption and decryption process in action:
-
-```bash
-python examples/demo.py
+# Decrypt the image
+crypto.decrypt_image("encrypted.png", "decrypted.png")
+print("Image successfully decrypted!")
 ```
 
 ---
 
-## Running Tests
+## Examples
 
-Ensure the system works as expected by running the included unit tests:
+A demonstration script is available in the `examples/` directory. To try it out:
+
+1. Navigate to the `examples` directory:
+   ```bash
+   cd examples
+   ```
+
+2. Run the demo script:
+   ```bash
+   python demo.py
+   ```
+
+3. Follow the on-screen prompts to encrypt and decrypt an image.
+
+Sample input image: `examples/test_image.png`.
+
+---
+
+## Testing
+
+The `tests/` directory contains unit tests for verifying the functionality of the library.
+
+To run the tests, use:
 
 ```bash
 pytest
 ```
 
----
-
-## Dependencies
-
-This project relies on the following Python packages:
-- **Pillow**: For image processing and manipulation.
-- **pytest**: For running unit tests.
-
-All dependencies are listed in `requirements.txt`.
+Ensure that all tests pass successfully.
 
 ---
 
 ## Contributing
 
-Contributions are welcome! If you'd like to improve the system or add new features:
+Contributions are welcome! If you'd like to contribute:
+
 1. Fork the repository.
-2. Create a new branch: `git checkout -b feature-name`.
-3. Commit your changes: `git commit -m "Add new feature"`.
-4. Push to the branch: `git push origin feature-name`.
-5. Open a pull request.
+2. Create a new branch for your feature or bug fix.
+3. Commit your changes with clear and descriptive messages.
+4. Submit a pull request for review.
 
 ---
 
 ## License
 
-This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
+This project is licensed under the [MIT License](LICENSE). You are free to use, modify, and distribute this software as per the license terms.
 
 ---
 
 ## Acknowledgments
 
-Special thanks to the developers of the Pillow library for providing robust image processing tools.
-
+- **Pillow**: For providing robust image processing capabilities.
+- **pytest**: For simplifying the testing process.
 ```
 
 ---
 
-### **Highlights**:
-1. **Clear Structure**: The directory structure section helps users understand the project organization at a glance.
-2. **Comprehensive Instructions**: Detailed steps for installation, usage, and testing are included.
-3. **Professional Formatting**: Sections are organized logically with consistent formatting for readability.
-4. **Encourages Contribution**: The contributing section invites collaboration, fostering a community-driven approach.
+### **Highlights of This README**
+- **Organized Structure**: Clear sections for setup, usage, examples, testing, and contributing.
+- **User-Friendly**: Step-by-step instructions for setting up the environment, running the script, and testing the functionality.
+- **Professional Presentation**: Markdown formatting for easy readability.
+- **Call to Action**: Encourages contributions and outlines how to get involved.
+
+This README serves as a comprehensive guide for users and developers, making it easy to understand and use the project.
