@@ -1,4 +1,3 @@
-Here’s a polished and professional version of the `README.md` file for your project:
 
 ---
 
